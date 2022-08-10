@@ -12,9 +12,9 @@ VALUES ( 'Mechanical Engineering');
 INSERT INTO STUDENT (student_name,student_surname,student_email,student_password,department_id) 
 VALUES ( 'Ahmet','Atak','ahmet@ahmet.com','123456',1);
 INSERT INTO STUDENT ( student_name,student_surname,student_email,student_password,department_id) 
-VALUES ( 'Erdem','Kafadar','erdem@erdem.com','123456',1);
+VALUES ( 'Aynur','Duran','aynur@duran.com','123456',1);
 INSERT INTO STUDENT ( student_name,student_surname,student_email,student_password,department_id) 
-VALUES ( 'Selin','YEŞİLTAÇ','selin@selin.com','123456',3);
+VALUES ( 'Ayşey','çelik','Ayşe@celik.com','123456',3);
 INSERT INTO STUDENT ( student_name,student_surname,student_email,student_password,department_id) 
 VALUES ( 'Ali','Veli','ali@veli.com','123456',2);
 /* Department data */
