@@ -111,7 +111,7 @@
 					"response": []
 				},
 				{
-					"name": "v1/student/",
+					"name": "v1/student/{student_id}",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -345,7 +345,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n        {\n            \n            \"courseId\": 1\n\n \n        }\n        \n    ]",
+							"raw": "[\n        {\n            \n            \"courseId\": 6\n\n \n        }\n        \n    ]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -353,7 +353,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/course/selected/1",
+							"raw": "http://localhost:8080/v1/course/selected/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -363,7 +363,7 @@
 								"v1",
 								"course",
 								"selected",
-								"1"
+								"4"
 							]
 						}
 					},
