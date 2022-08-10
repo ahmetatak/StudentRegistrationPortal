@@ -45,8 +45,8 @@ Open postman File>import and select ```HDITask.postman_collection.json```
 ###  Explanation Of APı URls
 main url http://localhost:8080;
 
-####  A Student Section
-1. ```GET http://localhost:8080/v1/student``` 
+####  A. Student Section
+1. ```GET /v1/student``` 
 it brings all student records in database. 
 
 2. ```GET /v1/student/{student_id}``` 
@@ -70,3 +70,62 @@ update student requaired studentId in body
 5. ```DELETE /v1/student/{student_id}```
 delete the student via student id
 
+####  B. Course Section
+```courseQuota``` represent how many student can take this course.
+ 
+
+1. ```GET  /v1/course``` 
+it brings all course records in database. 
+
+2. ```GET /v1/course/{course_id}``` 
+get spesific course information via student id  
+
+3. ```POST /v1/course``` 
+create a new course requaired json body
+
+4. ```PUT /v1/course/{courseId}``` 
+update course requaired courseId in body
+
+   
+5. ```DELETE /v1/course/{courseId}```
+delete the course via courseId
+
+####  C. Available Courses Section
+
+in this section, there is a table on database called COURSE_AVAILABLE it is spesified which course can be selected by students.
+
+1. ```GET  /v1/course/available/``` 
+it brings all course available records in database. 
+
+ 
+
+2. ```POST /v1/course/available/``` 
+create a new  course available requaired json body requaired courseId
+{
+courseId:4
+}
+
+
+ 
+
+   
+3. ```DELETE /v1/course/available/{courseAvailableId}```
+delete the  course available via courseId
+
+
+####  D Selected Course Section
+
+each selected course records saved on COURSE_SELECTED table in database. Only courses can be selected listed in Coursa Available section.
+
+
+1. ```GET  /v1/course/selected/``` 
+it brings all course selected by ALL Students in database. 
+
+2. ```GET /v1/course/selected/{studentId}``` 
+get  course  selected by spesific student  via studentId
+
+3. ```POST /v1/course/selected/{studentId}``` 
+create and select a new course is available in COURSES_AVAILABLE table
+ 
+4. ```DELETE /v1/course/selected/{studentId}```
+delete selected course in COURSE_SELECTED table courseId requaired in body section
