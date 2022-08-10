@@ -23,7 +23,7 @@ project need to be build firstly
 5. ```cd HDITask``` 
 6. ```mvn clean package``` 
 7. ```cd ../``` back to up folder to build in docker.
-8. ```ls```  please make sure that HDITask Dockerfile is exist 
+8. ```ls```  please make sure that  Dockerfile is exist 
 9. ```docker build --tag=hdi-task:latest .```  build the container in docker
 10. ```docker run -p8080:8080 hdi-task:latest```  run in docker
 11. after successfult run the container the project will be running on 8080 port number
@@ -43,6 +43,31 @@ Open postman File>import and select ```HDITask.postman_collection.json```
 
 ##  Explanation Of APı URls
 
-#  Explanation Of APı URls
+###  Explanation Of APı URls
+main url http://localhost:8080;
 
+####  A Student Section
+1. ```GET http://localhost:8080/v1/student``` 
+it brings all student records in database. 
+
+2. ```GET /v1/student/{student_id}``` 
+get spesific student information via student id  
+
+3. ```POST /v1/student``` 
+create a new student requaired json body
+
+4. ```PUT /v1/student``` 
+update student requaired studentId in body
+ 
+        "studentId": 2,
+        "studentName": "Ahmet2",
+        "studentSurname": "ATAK2",
+        "studentEmail": "ahmet@ahmet.com",
+        "studentPassword": "123456",
+        "departmentId": 19999       
+
+    
+    
+5. ```DELETE /v1/student/{student_id}```
+delete the student via student id
 
