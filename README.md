@@ -38,8 +38,7 @@ Jdb Url
 ##  Testing On Postman
 Open postman File>import and select ```HDITask.postman_collection.json``` 
 
-<img width="1658" alt="postnl" src="https://user-images.githubusercontent.com/3717312/183995663-dadac617-de7b-45f7-9372-1270380e8f8d.png">
-
+<img width="1658" alt="postnl" src="https://user-images.githubusercontent.com/3717312/184002176-d309a6ca-77ea-466c-afa5-457471f686ec.png">
 
 ##  Explanation Of APı URls
 
