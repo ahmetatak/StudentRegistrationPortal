@@ -1,0 +1,40 @@
+ 
+
+    DROP TABLE IF EXISTS DEPARTMENT;
+    CREATE TABLE DEPARTMENT (
+    department_id INT AUTO_INCREMENT  PRIMARY KEY NOT NULL,  
+    department_name VARCHAR(100) NOT NULL
+); 
+
+    DROP TABLE IF EXISTS STUDENT;
+    CREATE TABLE STUDENT (
+    student_id INT AUTO_INCREMENT  PRIMARY KEY NOT NULL,
+    student_name VARCHAR(100) NOT NULL,  
+    student_surname VARCHAR(100) NOT NULL,
+    student_email VARCHAR(200) NOT NULL, 
+    student_password VARCHAR(250) NOT NULL, 
+    department_id INT NOT NULL
+); 
+ 
+ 
+    DROP TABLE IF EXISTS COURSE;
+    CREATE TABLE COURSE (
+    course_id INT AUTO_INCREMENT  PRIMARY KEY NOT NULL,
+    course_code VARCHAR(20) NOT NULL,   
+    course_name VARCHAR(100) NOT NULL,  
+    course_quota INT NOT NULL
+); 
+
+    DROP TABLE IF EXISTS COURSE_AVAILABLE;
+    CREATE TABLE COURSE_AVAILABLE (
+    course_available_id INT AUTO_INCREMENT  PRIMARY KEY NOT NULL,  
+    course_id INT NOT NULL
+); 
+
+    DROP TABLE IF EXISTS COURSE_SELECTED;
+    CREATE TABLE COURSE_SELECTED (
+    course_selected_id INT AUTO_INCREMENT  PRIMARY KEY NOT NULL, 
+    course_id INT NOT NULL,
+    student_id INT NOT NULL
+);  
+
