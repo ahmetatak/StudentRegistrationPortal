@@ -1,5 +1,5 @@
 # StudentRegistrationPortal
-Studetin registration rest api build in this application
+Student registration rest api build in this application
 
 ##  Project Based on
 Backend          | Database
