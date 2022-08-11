@@ -29,7 +29,7 @@ public class CourseSelectedService {
 	return courseSelectedRepository.findByStudentId(studentId);
 	} 
 	//Search byInt
-	public CourseSelectedEntity find(int studentId, int courseId)   
+	public List<CourseSelectedEntity> find(int studentId, int courseId)   
 	{  
 		 
 		return courseSelectedRepository.findByStudentIdAndCourseId(studentId,courseId);

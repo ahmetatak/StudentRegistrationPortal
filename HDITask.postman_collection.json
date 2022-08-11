@@ -347,7 +347,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:8080/v1/course/selected/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"course",
+								"selected",
+								""
+							]
 						}
 					},
 					"response": []
@@ -358,7 +369,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:8080/v1/course/selected/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"course",
+								"selected",
+								"1"
+							]
 						}
 					},
 					"response": []
@@ -370,7 +392,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n        {\n            \n            \"courseId\": 6\n\n \n        }\n        \n    ]",
+							"raw": "[\n        {\n            \n            \"courseId\": 1\n\n\n \n        }\n        \n    ]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -378,7 +400,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/course/selected/4",
+							"raw": "http://localhost:8080/v1/course/selected/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -388,7 +410,7 @@
 								"v1",
 								"course",
 								"selected",
-								"4"
+								"3"
 							]
 						}
 					},
@@ -399,6 +421,15 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n                {\n\n                    \"courseId\":1\n\n                }\n           \n ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:8080/v1/course/selected/1",
 							"protocol": "http",

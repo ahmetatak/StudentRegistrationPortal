@@ -156,16 +156,18 @@ public class CourseSelectedController {
 			}else {
 				
 				//if student is already selected the course 
-				CourseSelectedEntity searchResult=courseSelectedService.find(studentId,courseId );
-
-				if(!(searchResult==null))
-					 return new ResponseHelper
-					    		(false,
-					    		"AllreadySelected",
-					    		"Selected Allready!",
-					    		"Student is already selected the course."
-					    		)
-					    		.build(HttpStatus.BAD_REQUEST);
+				List<CourseSelectedEntity> search=courseSelectedService.find(studentId,courseId );
+ 
+				for (CourseSelectedEntity searchResult : search) {
+					if(!(searchResult==null))
+						 return new ResponseHelper
+						    		(false,
+						    		"AllreadySelected",
+						    		"Selected Allready!",
+						    		"Student is already selected the course."
+						    		)
+						    		.build(HttpStatus.BAD_REQUEST);
+				}
 				
 				//there is no problem so student can select the course
 		 
@@ -217,14 +219,17 @@ public class CourseSelectedController {
 			for (CourseSelectedEntity course : courseSelectedEntity) {
 			int courseId=	course.getCourseId();
 			// lets check if course exist in database.
-			CourseSelectedEntity searchResult=courseSelectedService.find(studentId,courseId );
-			if(searchResult==null)
+			List<CourseSelectedEntity> search=courseSelectedService.find(studentId,courseId );
+			if(search==null)
 			{
 				//no need response
 			}
 			else {
-				courseSelectedService.delete(searchResult.getCourseSelectedId());
-				count++;
+				 for (CourseSelectedEntity searchResult : search) {
+					 courseSelectedService.delete(searchResult.getCourseSelectedId());
+						count++;
+				}
+				
 			}
 			}
 			
