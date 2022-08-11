@@ -31,7 +31,7 @@ private int courseAvailableId;
 	@Column 
 private int courseId;
 
-	@OneToMany(cascade = CascadeType.ALL,orphanRemoval =false)
+	@OneToMany()
     @JoinColumn(name = "courseId", referencedColumnName = "courseId",updatable = false)
  	private List<CourseEntity> courseEntities;
  

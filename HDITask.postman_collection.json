@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9c9b8e98-14d9-45c9-8d4f-98c299e8c0a8",
+		"_postman_id": "7aae8cbd-573e-48f5-9405-14421b1265df",
 		"name": "HDITask",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "12958464"
@@ -57,7 +57,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "        {\n \n            \"studentName\": \"Aynur\",\n            \"studentSurname\": \"Duran\",\n            \"studentEmail\": \"aynuree@duran.com\",\n            \"studentPassword\": \"123456\",\n            \"departmentId\": 1\n        }",
+							"raw": "        {\n \n            \"studentName\": \"Aynur\",\n            \"studentSurname\": \"Duran\",\n            \"studentEmail\": \"aynur4ee@duran.com\",\n            \"studentPassword\": \"123456\",\n            \"departmentId\": 1\n        }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -87,7 +87,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\n        \"studentId\": 1,\n        \"studentName\": \"Ahmet\",\n        \"studentSurname\": \"cc\",\n        \"studentEmail\": \"ahmet@ahmet.com\",\n        \"studentPassword\": \"123456\",\n        \"departmentId\": 1,\n        \"departmentList\": [\n            {\n                \"departmentId\": 1,\n                \"departmentName\": \"Computer Engineering\"\n            }\n        ]\n    }",
+							"raw": "    {\n        \"studentId\": 1,\n        \"studentName\": \"AHMET\",\n        \"studentSurname\": \"ATAK\",\n        \"studentEmail\": \"ahmet@ahmet.com\",\n        \"studentPassword\": \"1234569\",\n        \"departmentId\": 3\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -116,7 +116,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/v1/student/3",
+							"raw": "http://localhost:8080/v1/student/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -125,7 +125,7 @@
 							"path": [
 								"v1",
 								"student",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -162,7 +162,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/v1/course",
+							"raw": "http://localhost:8080/v1/course/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -170,7 +170,8 @@
 							"port": "8080",
 							"path": [
 								"v1",
-								"course"
+								"course",
+								"1"
 							]
 						}
 					},
@@ -233,7 +234,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "        {\n            \"courseId\": 1,\n            \"courseName\": \"Calculus sss|\",\n            \"courseCode\": \"MATH1011111111\",\n            \"courseQuota\": 2333\n        }",
+							"raw": "        {\n            \"courseId\": 1,\n            \"courseName\": \"Calculus sss|\",\n            \"courseCode\": \"matematik\",\n            \"courseQuota\": 1\n        }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -267,7 +268,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"courseId\":5\n}",
+							"raw": "{\n    \"courseId\":4\n    \n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -319,7 +320,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/v1/course/available/5",
+							"raw": "http://localhost:8080/v1/course/available/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -329,7 +330,7 @@
 								"v1",
 								"course",
 								"available",
-								"5"
+								"1"
 							]
 						}
 					},
