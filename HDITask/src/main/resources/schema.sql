@@ -28,13 +28,13 @@
     DROP TABLE IF EXISTS COURSE_AVAILABLE;
     CREATE TABLE COURSE_AVAILABLE (
     course_available_id INT AUTO_INCREMENT  PRIMARY KEY NOT NULL,  
-    course_id INT NOT NULL
+    course_id INT  
 ); 
 
     DROP TABLE IF EXISTS COURSE_SELECTED;
     CREATE TABLE COURSE_SELECTED (
     course_selected_id INT AUTO_INCREMENT  PRIMARY KEY NOT NULL, 
-    course_id INT NOT NULL,
-    student_id INT NOT NULL
+    course_id INT,
+    student_id INT
 );  
 

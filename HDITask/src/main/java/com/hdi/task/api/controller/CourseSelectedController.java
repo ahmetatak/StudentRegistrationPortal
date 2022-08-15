@@ -194,6 +194,7 @@ public class CourseSelectedController {
 		 
 			
 				CourseSelectedEntity model = new CourseSelectedEntity();
+		 
 				model.setCourseId(courseId);
 				model.setStudentId(studentId);
 				if(!(model==null))
