@@ -15,7 +15,12 @@ public class CourseAvailableService {
 	@Autowired
 	CourseAvailableRepository courseAvailableRepository;
 	
-	
+	public CourseAvailableEntity findByCourseId(int courseId)
+	{
+		CourseAvailableEntity course=courseAvailableRepository.findByCourseId(courseId);
+		return course;
+		
+	}
 	public List<CourseAvailableEntity> getAllCourses()
 	{
 		List<CourseAvailableEntity> listOfCourse = new ArrayList<CourseAvailableEntity>();  

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hdi.task.api.entity.CourseAvailableEntity;
 import com.hdi.task.api.entity.CourseEntity;
 import com.hdi.task.api.entity.CourseSelectedEntity;
 import com.hdi.task.api.entity.StudentEntity;
@@ -29,6 +30,9 @@ public class CourseSelectedController {
 	CourseSelectedService courseSelectedService; 
 	@Autowired
 	StudentService studentService;
+	
+	@Autowired
+	CourseAvailableService courseAvailableService;
 	
 	@Autowired  
 	CourseService courseService; 
@@ -132,14 +136,31 @@ public class CourseSelectedController {
 			//if course is exist than lets check the quota
 			CourseEntity getCourse= courseService.getCourseById(courseId);
 			
+			 
 			long countTotali=getCourse.getCourseQuota();
 			String courseName=getCourse.getCourseName();
 			String courseCode=getCourse.getCourseCode();
-		
-			//lets count selected course
+			
+			 CourseAvailableEntity courseAvailableEntity= courseAvailableService.findByCourseId(getCourse.getCourseId());
+			
+			 
+			 //let check if course can be available
+			 
+			 
+			 if(courseAvailableEntity==null)
+					return new ResponseHelper
+				    		(false,
+				    		"notSelected",
+				    		"Failed to select the course",
+				    		"Course is not in available list"
+				    		)
+				    		.build(HttpStatus.BAD_REQUEST);
+				//lets count selected course
+				 
 			long countSelected=courseSelectedService.count(getCourse.getCourseId());
 			 //if the course cannot be selected 
-	 
+			 
+				
 			if(countSelected>=countTotali)
 			{
 				
